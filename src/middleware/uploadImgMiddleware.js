@@ -61,7 +61,6 @@ const uploadImgMiddleware = (fieldName) => async (req, res, next) => {
       res.status(200).json({ message: 'Image successfully uploaded' });
       next();
     } catch (error) {
-      console.error(error);
       res.status(500).send('Error uploading file to S3');
     }
   });
